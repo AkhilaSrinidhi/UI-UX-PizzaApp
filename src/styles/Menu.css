@@ -1,0 +1,175 @@
+.menu {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: linear-gradient(135deg, #f4f4f4, #ffffff);
+}
+
+.menu .menuTitle {
+  font-size: 60px;
+  color: rgb(253, 172, 10);
+}
+
+.menuTitle {
+  margin-bottom: 60px;
+}
+
+.menuList {
+  width: 70vw;
+  height: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  place-items: center;
+}
+
+/* MENU ITEM STYLING */
+
+.menuItem {
+  border-radius: 15px;
+  width: 300px;
+  height: 370px;
+  margin: 20px;
+  position: relative;
+  transition: background-color 0.3s ease;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  align-items: center;
+  z-index: 1; /* Ensure that each menu item is on the same stacking level */
+}
+
+.menuItem:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 4px 20px rgba(247, 134, 22, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  z-index: 10; /* Bring the menu item to the top when hovered */
+}
+
+.menuItem div {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  width: 100%;
+  height: 200px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.menuItem h2 {
+  margin-bottom: 3px;
+  text-align: center;
+  font-family: "Lobster Two", sans-serif;
+  font-weight: 550;
+  font-style: bold;
+  color: rgb(245, 173, 39);
+}
+
+.menuItem p {
+  margin-bottom: 3px;
+  text-align: center;
+}
+
+.amount-btn,
+.amount {
+  width: 30px;
+  height: 30px;
+  background-color: #f4f4f4;
+  border: 1px solid #ccc;
+  justify-content: center;
+  align-items: center;
+  margin-left: 0px;
+  padding: 0px 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+  text-align: center;
+  display: inline-block;
+}
+
+.amount-btn-dec {
+  margin-left: 50px;
+}
+
+.amount-btn:hover {
+  background-color: #ddd;
+}
+
+.amount {
+  min-width: 30px;
+  display: inline-block;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  cursor: default;
+}
+
+.fact-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  align-items: center;
+  padding-left: 10px;
+  vertical-align: middle;
+}
+
+.fact-btn svg {
+  width: 100px;
+  height: 100px;
+  fill: currentColor;
+  margin-left: 27px;
+  margin-bottom: 0px;
+}
+
+/* Detail-Box */
+.detail-box {
+  position: absolute; /* Positioning within the container */
+  top: 100%; /* Position below the item */
+  left: 0;
+  right: 0;
+  z-index: 20; /* Ensure the detail box stays above the menu item */
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  margin-top: 1px;
+  word-wrap: break-word;
+}
+
+.hidden {
+  display: none; /* Hide the box when not needed */
+}
+
+.detail-box h4 {
+  margin: 0 0 1px;
+  font-size: 14px;
+}
+
+.detail-box p {
+  font-size: 12px;
+}
+
+.detail-box ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.detail-box ul li {
+  font-size: 12px;
+  margin-bottom: 3px;
+}
+
+/* Responsive design for different screen sizes */
+@media only screen and (max-width: 1300px) {
+  .menuList {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .menuList {
+    grid-template-columns: 1fr;
+  }
+}
